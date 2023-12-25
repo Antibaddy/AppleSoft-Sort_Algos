@@ -2,7 +2,7 @@
 12 REM *** Antibaddy
 100 CLEAR : HOME
 101 PRINT "INSERTION SORT ALGORITHM DEMONSTRATION"
-102 PRINT "Antibaddy (c) 2023": PRINT
+102 PRINT "Antibaddy 2023": PRINT
 105 GOSUB 4000
 110 PRINT "Input length of array A (from ";str$(mnL);" to ";str$(mxL);")";
 115 INPUT L
@@ -12,7 +12,7 @@
 135 GOSUB 5000
 160 GOSUB 6000
 165 PRINT : PRINT : PRINT "Sorting...": GOSUB 1000
-170 PRINT : PRINT : PRINT "FINISHED!": GOSUB 2000
+170 PRINT : PRINT : PRINT "FINISHED!"
 199 END
 1000 REM SUB( A[] ) Insertion Sort Array A
 1010    FOR CURRENT = 2 TO L
@@ -26,13 +26,6 @@
 1080    NEXT CURRENT
 1090 RETURN
 1999 REM
-2000 REM SUB( A[] ) Print Array
-2010    PRINT: PRINT "A[ ";
-2020    FOR J = 1 TO L
-2030       PRINT A(J);" ";
-2040    NEXT J: PRINT "]"
-2050 RETURN
-2999 REM
 3000 REM SUB SWAP( A[] ) Swap A(i) and A(i-1)
 3010    TMP = A(I)
 3015    A(I) = A(I-1)
@@ -77,9 +70,17 @@
 6035    NEXT J
 6055 RETURN
 6999 REM
+9700 REM SUB( A[] ) Print Array
+9710    PRINT: PRINT "A[ ";
+9720    FOR J = 1 TO L
+9730       PRINT A(J);" ";
+9740    NEXT J: PRINT "]"
+9750 RETURN
+9799 REM
 9800 REM SUB MOD_COLOR( INT L) Calculates the modulus color based on index into Array A[], J
 9805    DEF FN MODCOL(C) = (14 - (INT(14 / C) * C))
 9810 RETURN
+9899 REM
 9900 REM SUB RAN( INT R ) RAN Function for generating random number from 1 to R
 9905    DEF FN RAN (R) = (INT(RND(1)*R)+1)
 9910 RETURN
